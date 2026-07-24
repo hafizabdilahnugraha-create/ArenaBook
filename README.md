@@ -170,6 +170,27 @@ DB_PASSWORD=</code></pre>
 
 <h3>1. Halaman Login & Autentikasi</h3>
 
-<p align="center">
-  <img src="screenshots/login.png" alt="Halaman Login" width="800">
-</p>
+<img width="2880" height="1800" alt="Cuplikan layar 2026-07-25 004556" src="https://github.com/user-attachments/assets/291e0ac2-699b-4906-a4d5-1e1a2b12ed58" />
+
+<h3>2. Verifikasi Email</h3>
+
+<img width="2880" height="1800" alt="Cuplikan layar 2026-07-25 005347" src="https://github.com/user-attachments/assets/6afa4c51-5630-45f2-a825-9bc71ea44f92" />
+<img width="2880" height="1704" alt="Cuplikan layar 2026-07-25 005534" src="https://github.com/user-attachments/assets/cac9a1bc-9fd5-4102-a615-5c1e29ba7a7b" />
+
+<h3>3. Dashboard</h3>
+
+<img width="2880" height="1800" alt="Cuplikan layar 2026-07-25 010141" src="https://github.com/user-attachments/assets/0249bc90-9356-4ba4-b927-d85f9bf976d1" />
+
+<h3>4. CRUD</h3>
+
+<img width="2880" height="1800" alt="Cuplikan layar 2026-07-25 010321" src="https://github.com/user-attachments/assets/759729e8-16a0-40bd-8352-b64ca4e93993" />
+
+<h3>6. Pemisahan Hak Akses Admin dan User</h3>
+
+<img width="2880" height="1800" alt="Cuplikan layar 2026-07-25 010321" src="https://github.com/user-attachments/assets/ac040485-8a34-4efb-aecf-3e7d7d7f0707" />
+<img width="2880" height="1800" alt="Cuplikan layar 2026-07-25 010727" src="https://github.com/user-attachments/assets/dea240ac-ff03-43a1-88b7-1737e9bd0cb0" />
+
+<h3> </h3>
+
+
+
