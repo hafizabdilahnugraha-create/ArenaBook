@@ -3,39 +3,36 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DashboardController;
-use App\Http\Controllers\CourtController;
 use App\Http\Controllers\ReservationController;
+use App\Http\Controllers\Admin\CourtController;
 
 Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+// Route yang membutuhkan autentikasi
+Route::middleware(['auth'])->group(function () {
+    
+    // Dashboard Utama
+    Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+    Route::get('/admin/dashboard', [DashboardController::class, 'index'])->name('admin.dashboard');
 
-Route::middleware('auth')->group(function () {
+    // Profile Routes
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
-    // Tambahkan baris ini di dalam grup middleware 'auth'
-    Route::get('/riwayat-booking', [\App\Http\Controllers\ReservationController::class, 'history'])->name('riwayat.booking');
-    Route::post('/reservations', [\App\Http\Controllers\ReservationController::class, 'store'])->name('reservations.store');
-    Route::get('/reservations/{id}/pdf', [\App\Http\Controllers\ReservationController::class, 'downloadReceipt'])->name('user.reservation.pdf');
-});
+    
+    // User Reservation Routes
+    Route::get('/riwayat-booking', [ReservationController::class, 'history'])->name('riwayat.booking');
+    Route::post('/reservations', [ReservationController::class, 'store'])->name('reservations.store');
+    Route::post('/user/book', [ReservationController::class, 'store'])->name('book.court');
+    Route::get('/reservations/{id}/pdf', [ReservationController::class, 'downloadReceipt'])->name('user.reservation.pdf');
 
-Route::middleware(['auth'])->group(function () {
-    // Rute utama yang mengarahkan ke dashboard masing-masing
-    Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
-
-    // CRUD khusus Admin
-    Route::middleware('admin')->group(function () {
-        Route::resource('admin/courts', CourtController::class);
-        Route::post('admin/reservations/{id}/approve', [ReservationController::class, 'approve']);
+    // Admin Routes (CRUD Lapangan & Approve Reservasi)
+    Route::middleware('admin')->prefix('admin')->name('admin.')->group(function () {
+        Route::resource('courts', CourtController::class);
+        Route::post('reservations/{id}/approve', [ReservationController::class, 'approve']);
     });
-
-    // Rute khusus User untuk booking lapangan
-    Route::post('user/book', [ReservationController::class, 'store'])->name('book.court');
 
 });
 
