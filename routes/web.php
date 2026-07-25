@@ -10,12 +10,13 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-// Route yang membutuhkan autentikasi
 Route::middleware(['auth'])->group(function () {
     
-    // Dashboard Utama
+    // Dashboard User (Memanggil DashboardController fungsi index)
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
-    Route::get('/admin/dashboard', [DashboardController::class, 'index'])->name('admin.dashboard');
+
+    // Dashboard Admin (Memanggil DashboardController fungsi adminIndex)
+    Route::get('/admin/dashboard', [DashboardController::class, 'adminIndex'])->name('admin.dashboard');
 
     // Profile Routes
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
@@ -28,12 +29,11 @@ Route::middleware(['auth'])->group(function () {
     Route::post('/user/book', [ReservationController::class, 'store'])->name('book.court');
     Route::get('/reservations/{id}/pdf', [ReservationController::class, 'downloadReceipt'])->name('user.reservation.pdf');
 
-    // Admin Routes (CRUD Lapangan & Approve Reservasi)
+    // Admin Routes
     Route::middleware('admin')->prefix('admin')->name('admin.')->group(function () {
         Route::resource('courts', CourtController::class);
         Route::post('reservations/{id}/approve', [ReservationController::class, 'approve']);
     });
-
 });
 
 require __DIR__.'/auth.php';
