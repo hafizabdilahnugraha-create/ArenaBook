@@ -186,11 +186,67 @@ DB_PASSWORD=</code></pre>
 <img width="2880" height="1800" alt="Cuplikan layar 2026-07-25 010321" src="https://github.com/user-attachments/assets/759729e8-16a0-40bd-8352-b64ca4e93993" />
 
 <h3>6. Pemisahan Hak Akses Admin dan User</h3>
-
+<h4>dashboard admin</h4>
 <img width="2880" height="1800" alt="Cuplikan layar 2026-07-25 010321" src="https://github.com/user-attachments/assets/ac040485-8a34-4efb-aecf-3e7d7d7f0707" />
 <img width="2880" height="1800" alt="Cuplikan layar 2026-07-25 010727" src="https://github.com/user-attachments/assets/dea240ac-ff03-43a1-88b7-1737e9bd0cb0" />
+<h4>dashboard user</h4>
+<img width="2880" height="1800" alt="Cuplikan layar 2026-07-25 175102" src="https://github.com/user-attachments/assets/e14fc54c-3f3f-41e4-82d2-20a55aff2f82" />
+<img width="2880" height="1704" alt="Cuplikan layar 2026-07-25 082618" src="https://github.com/user-attachments/assets/6fd0aa90-fc3d-4068-97f7-948d88d7dcf4" />
 
-<h3> </h3>
+<h3>7. Tampilan Desktop dan Mobile</h3>
+<h4>Deskop</h4>
+<img width="2880" height="1800" alt="Cuplikan layar 2026-07-25 175457" src="https://github.com/user-attachments/assets/6bc25efb-4154-4c8d-aba2-c2c9f44edd07" />
+<h4>mobile</h4>
+<img width="1356" height="1506" alt="Cuplikan layar 2026-07-25 175431" src="https://github.com/user-attachments/assets/929ba570-2b1c-4918-8f01-79a7395f377c" />
 
+<h3>8. Hasil Export PDF</h3>
+<img width="1954" height="1490" alt="image" src="https://github.com/user-attachments/assets/d603b9e1-c68c-4ad7-9602-ea1c221cb494" />
 
+# **Struktur ROLE dan Hak Akses**
+<div class="overflow-x-auto my-6">
+    <table class="table w-full border-collapse border border-gray-300 bg-white shadow-md rounded-lg overflow-hidden text-sm">
+        <thead>
+            <tr class="bg-[#043873] text-white text-left">
+                <th class="p-3 border border-gray-300">Fitur / Aksi</th>
+                <th class="p-3 border border-gray-300 text-center w-28">Admin</th>
+                <th class="p-3 border border-gray-300 text-center w-28">User / Pelanggan</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="hover:bg-gray-50">
+                <td class="p-3 border border-gray-300">Lihat data lapangan & ketersediaan</td>
+                <td class="p-3 border border-gray-300 text-center text-green-600 font-bold">✅</td>
+                <td class="p-3 border border-gray-300 text-center text-green-600 font-bold">✅</td>
+            </tr>
+            <tr class="hover:bg-gray-50">
+                <td class="p-3 border border-gray-300">Tambah / Edit / Hapus data lapangan (Master)</td>
+                <td class="p-3 border border-gray-300 text-center text-green-600 font-bold">✅</td>
+                <td class="p-3 border border-gray-300 text-center text-red-500 font-bold">❌</td>
+            </tr>
+            <tr class="hover:bg-gray-50">
+                <td class="p-3 border border-gray-300">Lihat riwayat pemesanan / booking</td>
+                <td class="p-3 border border-gray-300 text-center text-green-600 font-bold">✅ <span class="text-xs text-gray-500 font-normal">(Semua user)</span></td>
+                <td class="p-3 border border-gray-300 text-center text-green-600 font-bold">✅ <span class="text-xs text-gray-500 font-normal">(Pribadi)</span></td>
+            </tr>
+            <tr class="hover:bg-gray-50">
+                <td class="p-3 border border-gray-300">Lakukan pemesanan lapangan (Booking)</td>
+                <td class="p-3 border border-gray-300 text-center text-red-500 font-bold">❌</td>
+                <td class="p-3 border border-gray-300 text-center text-green-600 font-bold">✅</td>
+            </tr>
+            <tr class="hover:bg-gray-50">
+                <td class="p-3 border border-gray-300">Persetujuan / Validasi pesanan (Approve/Reject)</td>
+                <td class="p-3 border border-gray-300 text-center text-green-600 font-bold">✅</td>
+                <td class="p-3 border border-gray-300 text-center text-red-500 font-bold">❌</td>
+            </tr>
+            <tr class="hover:bg-gray-50">
+                <td class="p-3 border border-gray-300">Akses halaman Dashboard Utama</td>
+                <td class="p-3 border border-gray-300 text-center text-green-600 font-bold">✅ <span class="text-xs text-gray-500 font-normal">(Statistik & Grafik)</span></td>
+                <td class="p-3 border border-gray-300 text-center text-green-600 font-bold">✅ <span class="text-xs text-gray-500 font-normal">(Katalog Lapangan)</span></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+# **Linsensi**
+Project ini dibuat untuk keperluan akademik (Ujian Akhir Semester) dan tidak dimaksudkan untuk penggunaan komersial.
 
