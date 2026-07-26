@@ -185,6 +185,12 @@ DB_PASSWORD=</code></pre>
 
 <img width="2880" height="1800" alt="Cuplikan layar 2026-07-25 010321" src="https://github.com/user-attachments/assets/759729e8-16a0-40bd-8352-b64ca4e93993" />
 
+<h3>5 REST API&mdash;Menggunakan Postman</h3>
+<img width="2880" height="1800" alt="Cuplikan layar 2026-07-26 070925" src="https://github.com/user-attachments/assets/719b86f6-2b73-40ec-b0c6-86d59cc00854" />
+<img width="2880" height="1800" alt="Cuplikan layar 2026-07-26 070936" src="https://github.com/user-attachments/assets/98aa42a5-8ecb-4b97-b73b-936d66806ff7" />
+<img width="2880" height="1800" alt="Cuplikan layar 2026-07-26 070405" src="https://github.com/user-attachments/assets/d852e06c-4782-46e3-bed2-f5f0d6118c01" />
+
+
 <h3>6. Pemisahan Hak Akses Admin dan User</h3>
 <h4>dashboard admin</h4>
 <img width="2880" height="1800" alt="Cuplikan layar 2026-07-25 010321" src="https://github.com/user-attachments/assets/ac040485-8a34-4efb-aecf-3e7d7d7f0707" />
